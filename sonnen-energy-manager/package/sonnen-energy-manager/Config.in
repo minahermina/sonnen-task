@@ -1,0 +1,4 @@
+config BR2_PACKAGE_SONNEN_ENERGY_MANAGER
+	bool "sonnen-energy-manager"
+	help
+	  The Sonnen Energy Manager
