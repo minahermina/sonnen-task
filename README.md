@@ -12,6 +12,7 @@ This project simulates a solar energy management system where:
 
 - [Project Structure](#project-structure)
 - [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
 - [Running the Project](#running-the-project)
 - [Usage](#usage)
 - [Documentation](#documentation)
@@ -79,6 +80,15 @@ sudo dnf install qemu-system-x86 xz
 **Arch Linux (pacman)**:
 ```bash
 sudo pacman -S qemu-system-x86 xz
+```
+
+## Getting Started
+
+First, clone the repository:
+
+```bash
+git clone https://github.com/minahermina/sonnen-task
+cd sonnen-energy-manager
 ```
 
 ## Running the Project
