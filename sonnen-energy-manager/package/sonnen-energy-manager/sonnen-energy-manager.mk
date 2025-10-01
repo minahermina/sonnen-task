@@ -8,6 +8,9 @@ endef
 
 define SONNEN_ENERGY_MANAGER_INSTALL_TARGET_CMDS
     $(INSTALL) -D -m 0755 $(@D)/sonnen-server $(TARGET_DIR)/usr/bin
+    $(INSTALL) -D -m 0755 $(@D)/sonnen-client $(TARGET_DIR)/usr/bin
+    $(INSTALL) -D -m 0644 $(@D)/sonnen-client.service $(TARGET_DIR)/etc/systemd/system/
+    $(INSTALL) -D -m 0644 $(@D)/sonnen-server.service $(TARGET_DIR)/etc/systemd/system/
 endef
 
 $(eval $(generic-package))
