@@ -87,8 +87,8 @@ sudo pacman -S qemu-system-x86 xz
 First, clone the repository:
 
 ```bash
-git clone https://github.com/minahermina/sonnen-task
-cd sonnen-energy-manager
+git clone --depth=1 https://github.com/minahermina/sonnen-task
+cd sonnen-task
 ```
 
 ## Running the Project
