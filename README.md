@@ -12,22 +12,10 @@ This project simulates a solar energy management system where:
 
 - [Project Structure](#project-structure)
 - [Prerequisites](#prerequisites)
-- [Building the Project](#building-the-project)
 - [Running the Project](#running-the-project)
 - [Usage](#usage)
 - [Documentation](#documentation)
 - [Troubleshooting](#troubleshooting)
-
-### Message Flow
-
-1. **Data Request**: Client → Server
-   - Client requests current PV and consumption data
-   
-2. **Data Response**: Server → Client
-   - Server responds with simulated solar data
-   
-3. **Battery Command**: Client → Server
-   - Client calculates and sends charge/discharge command
 
 ## Project Structure
 
