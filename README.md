@@ -25,11 +25,11 @@ This project simulates a solar energy management system where:
 │   ├── bzImage                 # Linux kernel image
 │   └── rootfs.ext2.xz          # Compressed rootfs
 │
-├── docs/                       # Project documentation
+├── docs/
+│   └── doc.md                  # Project documentation
 │
 ├── scripts/
-│   ├── run-qemu.sh             # Starts QEMU with kernel + rootfs
-│   └── setup-buildroot.sh      # Downloads and configures Buildroot
+│   └── run-qemu.sh             # Starts QEMU with kernel + rootfs
 │
 └── sonnen-energy-manager/      # Buildroot external package
     ├── Config.in
