@@ -1,5 +1,5 @@
 [Unit]
-Description=Sonnen Battery Data Server
+Description=Sonnen Battery Energy Manager Server
 After=network.target
 
 [Service]
