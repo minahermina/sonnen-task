@@ -1,0 +1,12 @@
+[Unit]
+Description=Sonnen Battery Data Server
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/sonnen-server
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target

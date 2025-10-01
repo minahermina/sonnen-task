@@ -1,0 +1,13 @@
+[Unit]
+Description=Sonnen Battery Energy Manager Client
+After=sonnen-server.service
+Requires=sonnen-server.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/sonnen-client
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target

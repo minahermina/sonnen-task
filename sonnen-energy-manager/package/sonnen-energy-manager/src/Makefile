@@ -1,12 +1,28 @@
-.PHONY: clean
+CC = cc
+CFLAGS ?= -Wall -Wextra -O2 -std=c99 -D_POSIX_C_SOURCE=200809L
+LDFLAGS ?=
 
-all: sonnen-client sonnen-server
+TARGETS = sonnen-server sonnen-client
 
-sonnen-server: sonnen-server.c
-	$(CC) -o '$@' '$<'
+SERVER_OBJS = server.o protocol.o utils.o
+CLIENT_OBJS = client.o protocol.o utils.o
+ALL_OBJS = $(SERVER_OBJS) $(CLIENT_OBJS)
 
-sonnen-client: sonnen-client.c
-	$(CC) -o '$@' '$<'
+HEADERS = sonnen.h protocol.h utils.h
+
+
+all: $(TARGETS)
+
+%.o: %.c $(HEADERS)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+sonnen-server: $(SERVER_OBJS)
+	$(CC) $(LDFLAGS) -o $@ $^
+
+sonnen-client: $(CLIENT_OBJS)
+	$(CC) $(LDFLAGS) -o $@ $^
 
 clean:
-	rm sonnen-server sonnen-client
+	rm -f $(TARGETS) $(ALL_OBJS)
+
+.PHONY: all clean
